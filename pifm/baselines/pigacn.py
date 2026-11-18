@@ -1,9 +1,12 @@
 """
 PIGACN and GCN baselines.
 
-PIGACN follows Wu et al. (2025), IEEE Trans. Netw. Sci. Eng.: the attention
-logits are modulated elementwise by the nodal admittance matrix, so attention
-follows electrical rather than purely topological proximity.
+PIGACN follows the physics-informed graph attention of Wu et al. (2025), IEEE
+Trans. Netw. Sci. Eng.: the attention logits are modulated elementwise by the
+nodal admittance matrix, so attention follows electrical rather than purely
+topological proximity. The meta-learning stage of that work is not reproduced
+here; the network is trained directly on the feeder being evaluated, which is
+how the baseline enters the comparison.
 
     1. Embedding: Dense(feat_dim -> d_model) + ReLU
     2. n_layers PIGACN layers:

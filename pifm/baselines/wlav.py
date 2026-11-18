@@ -10,9 +10,6 @@ Implements two approaches for L1-norm state estimation:
      - Delta threshold controls L2/L1 transition
      - More stable than pure L1, similarly robust to outliers
 
-Two estimators are provided: iterative reweighting towards an L1 objective
-(IRLS-WLAV) and a Huber M-estimator solved as a smooth nonlinear program.
-
 Usage:
     python -m pifm.baselines.wlav --system 33
 """
